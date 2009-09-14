@@ -4,14 +4,14 @@
 Summary:	Russian resources for Iceape
 Summary(pl.UTF-8):	Rosyjskie pliki językowe dla Iceape
 Name:		iceape-lang-%{_lang}
-Version:	1.1.17
+Version:	1.1.18
 Release:	1
 License:	MPL 1.1 or GPL v2+ or LGPL v2.1+
 Group:		I18n
 Source0:	http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/%{version}/contrib-localized/seamonkey-%{version}.%{_lare}.langpack.xpi
-# Source0-md5:	4df9166b4fcec316e14d696f1b479dbc
-Source1:	http://www.mozilla-enigmail.org/download/release/0.95/enigmail-%{_lare}-0.95.xpi
-# Source1-md5:	323d5e3192772ca48671d74518899bc7
+# Source0-md5:	f8b2711442d846bcc513018c8792d6b4
+Source1:	http://www.mozilla-enigmail.org/download/release/0.96/enigmail-%{_lare}-0.96.xpi
+# Source1-md5:	a90bceae5d78402e30973a67ee16cefb
 Source2:	gen-installed-chrome.sh
 URL:		http://www.seamonkey-project.org/
 BuildRequires:	unzip
