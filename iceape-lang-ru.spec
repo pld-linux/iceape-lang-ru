@@ -5,7 +5,7 @@ Summary:	Russian resources for Iceape
 Summary(pl.UTF-8):	Rosyjskie pliki językowe dla Iceape
 Name:		iceape-lang-%{_lang}
 Version:	1.1.18
-Release:	1
+Release:	2
 License:	MPL 1.1 or GPL v2+ or LGPL v2.1+
 Group:		I18n
 Source0:	http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/%{version}/contrib-localized/seamonkey-%{version}.%{_lare}.langpack.xpi
@@ -34,14 +34,14 @@ Rosyjskie pliki językowe dla Iceape.
 %setup -q -c
 %{__unzip} -o -qq %{SOURCE1}
 install %{SOURCE2} .
-./gen-installed-chrome.sh locale chrome/{%{_reg},%{_lare},%{_lang}-unix,enigmail-%{_reg}}.jar \
+./gen-installed-chrome.sh locale chrome/{%{_reg},%{_lare},%{_lang}-unix,enigmail-%{_lare}}.jar \
 	> lang-%{_lang}-installed-chrome.txt
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
 
-install chrome/{%{_reg},%{_lare},%{_lang}-unix,enigmail-%{_reg}}.jar $RPM_BUILD_ROOT%{_chromedir}
+install chrome/{%{_reg},%{_lare},%{_lang}-unix,enigmail-%{_lare}}.jar $RPM_BUILD_ROOT%{_chromedir}
 install lang-%{_lang}-installed-chrome.txt $RPM_BUILD_ROOT%{_chromedir}
 cp -r searchplugins dictionaries defaults $RPM_BUILD_ROOT%{_datadir}/iceape
 
@@ -71,9 +71,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_chromedir}/%{_reg}.jar
 %{_chromedir}/%{_lare}.jar
 %{_chromedir}/%{_lang}-unix.jar
-%{_chromedir}/enigmail-%{_reg}.jar
+%{_chromedir}/enigmail-%{_lare}.jar
 %{_chromedir}/lang-%{_lang}-installed-chrome.txt
 %{_datadir}/iceape/searchplugins/*
+%{_datadir}/iceape/defaults/messenger/*.dat
 %{_datadir}/iceape/defaults/messenger/%{_reg}
 %{_datadir}/iceape/defaults/profile/%{_reg}
 %{_datadir}/iceape/dictionaries/*
